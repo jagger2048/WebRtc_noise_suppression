@@ -12,16 +12,15 @@
 #include <string.h>
 #include <stdlib.h>
 
-// #include "rtc_base/checks.h"
-// #include "common_audio/fft4g.h"
-// #include "common_audio/signal_processing/include/signal_processing_library.h"
-// #include "modules/audio_processing/ns/noise_suppression.h"
-// #include "modules/audio_processing/ns/ns_core.h"
-// #include "modules/audio_processing/ns/windows_private.h"
-
-#include "checks.h"
-#include "fft4g.c"
+//#include "rtc_base/checks.h"
+//#include "common_audio/signal_processing/include/signal_processing_library.h"
+//#include "common_audio/third_party/fft4g/fft4g.h"
+//#include "modules/audio_processing/ns/noise_suppression.h"
+//#include "modules/audio_processing/ns/ns_core.h"
+//#include "modules/audio_processing/ns/windows_private.h"
+//#include "rtc_base/checks.h"
 #include "signal_processing_library.h"
+#include "fft4g.h"
 #include "noise_suppression.h"
 #include "ns_core.h"
 #include "windows_private.h"
@@ -866,7 +865,7 @@ static void UpdateBuffer(const float* frame,
                          size_t frame_length,
                          size_t buffer_length,
                          float* buffer) {
-  RTC_DCHECK_LT(buffer_length, 2 * frame_length);
+  //RTC_DCHECK_LT(buffer_length, 2 * frame_length);			
 
   memcpy(buffer,
          buffer + frame_length,
@@ -902,7 +901,7 @@ static void FFT(NoiseSuppressionC* self,
                 float* magn) {
   size_t i;
 
-  RTC_DCHECK_EQ(magnitude_length, time_data_length / 2 + 1);
+  //RTC_DCHECK_EQ(magnitude_length, time_data_length / 2 + 1);
 
   WebRtc_rdft(time_data_length, 1, time_data, self->ip, self->wfft);
 
@@ -938,7 +937,7 @@ static void IFFT(NoiseSuppressionC* self,
                  float* time_data) {
   size_t i;
 
-  RTC_DCHECK_EQ(time_data_length, 2 * (magnitude_length - 1));
+  //RTC_DCHECK_EQ(time_data_length, 2 * (magnitude_length - 1));
 
   time_data[0] = real[0];
   time_data[1] = real[magnitude_length - 1];
@@ -1071,7 +1070,7 @@ void WebRtcNs_AnalyzeCore(NoiseSuppressionC* self, const float* speechFrame) {
   float parametric_num = 0.0;
 
   // Check that initiation has been done.
-  RTC_DCHECK_EQ(1, self->initFlag);
+  //RTC_DCHECK_EQ(1, self->initFlag);
   updateParsFlag = self->modelUpdatePars[0];
 
   // Update analysis buffer for L band.
@@ -1216,8 +1215,8 @@ void WebRtcNs_ProcessCore(NoiseSuppressionC* self,
   float sumMagnAnalyze, sumMagnProcess;
 
   // Check that initiation has been done.
-  RTC_DCHECK_EQ(1, self->initFlag);
-  RTC_DCHECK_LE(num_bands - 1, NUM_HIGH_BANDS_MAX);
+  //RTC_DCHECK_EQ(1, self->initFlag);
+  //RTC_DCHECK_LE(num_bands - 1, NUM_HIGH_BANDS_MAX);
 
   const float* const* speechFrameHB = NULL;
   float* const* outFrameHB = NULL;
@@ -1387,7 +1386,7 @@ void WebRtcNs_ProcessCore(NoiseSuppressionC* self,
       sumMagnAnalyze += self->magnPrevAnalyze[i];
       sumMagnProcess += self->magnPrevProcess[i];
     }
-    RTC_DCHECK_GT(sumMagnAnalyze, 0);
+    //RTC_DCHECK_GT(sumMagnAnalyze, 0);
     avgProbSpeechHB *= sumMagnProcess / sumMagnAnalyze;
     // Average filter gain from low band.
     // Average over second half (i.e., 4->8kHz) of frequencies spectrum.

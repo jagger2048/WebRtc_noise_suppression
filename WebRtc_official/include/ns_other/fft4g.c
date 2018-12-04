@@ -287,7 +287,6 @@ Appendix :
 */
 
 #include <stddef.h>
-#include "fft4g.h"// 额外添加的
 
 static void makewt(size_t nw, size_t *ip, float *w);
 static void makect(size_t nc, size_t *ip, float *c);

@@ -1,10 +1,17 @@
 #pragma once
+//#include "noise_suppression.c"
+//#include "ns_core.c"
+//#include "defines.h"
+////#include "typedefs.h"
+////#include "checks.cc"
+//#include <iostream>
+///===
+//#include "./modules/audio_processing/ns/noise_suppression.h"
 #include "noise_suppression.c"
 #include "ns_core.c"
-#include "defines.h"
-#include "typedefs.h"
-#include "checks.cc"
 #include <iostream>
+#include "fft4g.c"
+
 //#include <string>
 
 /*
@@ -20,6 +27,10 @@
 	WebRtc uses AudioBuffer class to split audio date into different bands.								
 
 */
+#ifndef nullptr
+#define nullptr 0
+#endif
+
 class WebRtc_NS
 {
 public:

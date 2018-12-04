@@ -11,10 +11,9 @@
 //#include "modules/audio_processing/ns/noise_suppression.h"
 #include "noise_suppression.h"
 
-
 #include <stdlib.h>
 #include <string.h>
-//
+
 //#include "common_audio/signal_processing/include/signal_processing_library.h"
 //#include "modules/audio_processing/ns/defines.h"
 //#include "modules/audio_processing/ns/ns_core.h"
@@ -24,7 +23,7 @@
 
 NsHandle* WebRtcNs_Create() {
   //NoiseSuppressionC* self = malloc(sizeof(NoiseSuppressionC));
-  NoiseSuppressionC* self = (NoiseSuppressionC*)malloc(sizeof(NoiseSuppressionC));
+  NoiseSuppressionC* self =(NoiseSuppressionC*) malloc(sizeof(NoiseSuppressionC));
   self->initFlag = 0;
   return (NsHandle*)self;
 }
