@@ -8,11 +8,17 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "modules/audio_processing/splitting_filter.h"
+//#include "modules/audio_processing/splitting_filter.h"
+//
+//#include "common_audio/channel_buffer.h"
+//#include "common_audio/signal_processing/include/signal_processing_library.h"
+//#include "rtc_base/checks.h"
 
-#include "common_audio/channel_buffer.h"
-#include "common_audio/signal_processing/include/signal_processing_library.h"
-#include "rtc_base/checks.h"
+#include "splitting_filter.h"
+
+#include "channel_buffer.h"
+#include "signal_processing_library.h"
+#include "checks.h"
 
 namespace webrtc {
 

@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="WebRtc">
+      <UniqueIdentifier>{c945063c-1abc-4e88-a2dd-2fa7b22e303a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebRtc\Noise suppression">
+      <UniqueIdentifier>{ce1da8a1-9061-478b-bda8-53fdb4b9f014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebRtc\Audio processing">
+      <UniqueIdentifier>{1f40fee6-f243-42ca-90b7-ef31f6134727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebRtc\Rtc base">
+      <UniqueIdentifier>{ceeaa698-2f45-400d-b616-841e699d993c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -24,6 +36,57 @@
     <ClInclude Include="WebRtc_NS.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\AduioFile\AudioFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ns\defines.h">
+      <Filter>WebRtc\Noise suppression</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ns\noise_suppression.h">
+      <Filter>WebRtc\Noise suppression</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ns\ns_core.h">
+      <Filter>WebRtc\Noise suppression</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ns\windows_private.h">
+      <Filter>WebRtc\Noise suppression</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\audio_util.h">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\dot_product_with_scale.h">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\fft4g.h">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\signal_processing_library.h">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\spl_inl.h">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audio_processing\spl_sqrt_floor.h">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\checks.h">
+      <Filter>WebRtc\Rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\compile_assert_c.h">
+      <Filter>WebRtc\Rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\constructormagic.h">
+      <Filter>WebRtc\Rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\inline.h">
+      <Filter>WebRtc\Rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\safe_compare.h">
+      <Filter>WebRtc\Rtc base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rtc_base\type_traits.h">
+      <Filter>WebRtc\Rtc base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,6 +94,30 @@
     </ClCompile>
     <ClCompile Include="WebRtc_official.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="include\AduioFile\AudioFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="include\ns\noise_suppression.c">
+      <Filter>WebRtc\Noise suppression</Filter>
+    </ClCompile>
+    <ClCompile Include="include\ns\ns_core.c">
+      <Filter>WebRtc\Noise suppression</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\audio_util.cc">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\dot_product_with_scale.cc">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\fft4g.c">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\audio_processing\spl_sqrt_floor.c">
+      <Filter>WebRtc\Audio processing</Filter>
+    </ClCompile>
+    <ClCompile Include="include\rtc_base\checks.cc">
+      <Filter>WebRtc\Rtc base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

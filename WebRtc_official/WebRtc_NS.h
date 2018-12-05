@@ -1,17 +1,15 @@
 #pragma once
-//#include "noise_suppression.c"
-//#include "ns_core.c"
-//#include "defines.h"
-////#include "typedefs.h"
-////#include "checks.cc"
-//#include <iostream>
-///===
-//#include "./modules/audio_processing/ns/noise_suppression.h"
-#include "noise_suppression.c"
-#include "ns_core.c"
+#include "noise_suppression.h"
+#include "ns_core.h"
 #include <iostream>
-#include "fft4g.c"
 
+
+#include "signal_processing_library.h"
+#include "splitting_filter.h"
+#include "three_band_filter_bank.h"
+#include "audio_util.h"
+
+//#include "fft4g.h"
 //#include <string>
 
 /*

@@ -33,11 +33,17 @@
 // MSVC++ requires this to be set before any other includes to get M_PI.
 #define _USE_MATH_DEFINES
 
-#include "modules/audio_processing/three_band_filter_bank.h"
+//#include "modules/audio_processing/three_band_filter_bank.h"
+#include "three_band_filter_bank.h"
 
 #include <cmath>
 
-#include "rtc_base/checks.h"
+#ifndef M_PI
+#define M_PI (3.141592654)
+#endif // !M_PI
+
+//#include "rtc_base/checks.h"
+#include "checks.h"
 
 namespace webrtc {
 namespace {
@@ -109,7 +115,8 @@ void Upsample(const float* in, size_t split_length, size_t offset, float* out) {
 // use a DCT to shift it in both directions at the same time, to the center
 // frequencies [1 / 12, 3 / 12, 5 / 12].
 ThreeBandFilterBank::ThreeBandFilterBank(size_t length)
-    : in_buffer_(rtc::CheckedDivExact(length, kNumBands)),
+    //: in_buffer_(rtc::CheckedDivExact(length, kNumBands)),
+    : in_buffer_(length /  kNumBands),
       out_buffer_(in_buffer_.size()) {
   for (size_t i = 0; i < kSparsity; ++i) {
     for (size_t j = 0; j < kNumBands; ++j) {

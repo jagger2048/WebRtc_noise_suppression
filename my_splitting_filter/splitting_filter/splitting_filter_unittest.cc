@@ -13,9 +13,12 @@
 
 #include <cmath>
 
-#include "common_audio/channel_buffer.h"
-#include "modules/audio_processing/splitting_filter.h"
-#include "test/gtest.h"
+//#include "common_audio/channel_buffer.h"
+//#include "modules/audio_processing/splitting_filter.h"
+//#include "test/gtest.h"
+#include "channel_buffer.h"
+#include "splitting_filter.h"
+#include "gtest.h"
 
 namespace webrtc {
 namespace {

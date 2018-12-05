@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="WebRtc splitting filter">
+      <UniqueIdentifier>{873dca42-749d-432d-9244-9c52c93a0658}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AduioFile\AudioFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rtc_base\checks.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="rtc_base\compile_assert_c.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="rtc_base\constructormagic.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="rtc_base\inline.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="rtc_base\safe_compare.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="rtc_base\type_traits.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\audio_util.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\sparse_fir_filter.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\three_band_filter_bank.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\signal_processing_library.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\dot_product_with_scale.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\spl_inl.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\spl_sqrt_floor.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="splitting_filter\splitting_filter.h">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="my_splitting_filter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AduioFile\AudioFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rtc_base\checks.cc">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter\audio_util.cc">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter\sparse_fir_filter.cc">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter\three_band_filter_bank.cc">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter\dot_product_with_scale.cc">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter\spl_sqrt_floor.c">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="splitting_filter\splitting_filter.c">
+      <Filter>WebRtc splitting filter</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

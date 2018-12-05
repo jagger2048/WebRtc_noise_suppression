@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{797546CD-8DC5-4F76-A90F-01923052E5AE}</ProjectGuid>
+    <ProjectGuid>{49C49095-8BA5-42D3-9319-7333001A30F4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>WebRtcofficial</RootNamespace>
+    <RootNamespace>mysplittingfilter</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,12 +70,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Repository\WebRTC\WebRtc_official\WebRtc_official\include\AduioFile;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Repository\NoiseSuppression\WebRtc_official\my_splitting_filter\AduioFile;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Repository\NoiseSuppression\WebRtc_official\my_splitting_filter\AduioFile;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -83,6 +84,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Repository\NoiseSuppression\WebRtc_official\my_splitting_filter\rtc_base;$(ProjectDir)AudioFile\;$(ProjectDir)splitting_filter\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Repository\NoiseSuppression\WebRtc_official\my_splitting_filter\AduioFile;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -91,21 +108,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>false</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)include\splitting_filter\;$(ProjectDir)include\rtc_base\;$(ProjectDir)include\ns;$(ProjectDir)include\;$(ProjectDir)include\\AduioFile\;$(ProjectDir)include\audio_processing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,43 +151,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\AduioFile\AudioFile.h" />
-    <ClInclude Include="include\audio_processing\audio_util.h" />
-    <ClInclude Include="include\audio_processing\dot_product_with_scale.h" />
-    <ClInclude Include="include\audio_processing\fft4g.h" />
-    <ClInclude Include="include\audio_processing\signal_processing_library.h" />
-    <ClInclude Include="include\audio_processing\spl_inl.h" />
-    <ClInclude Include="include\audio_processing\spl_sqrt_floor.h" />
-    <ClInclude Include="include\ns\defines.h" />
-    <ClInclude Include="include\ns\noise_suppression.h" />
-    <ClInclude Include="include\ns\ns_core.h" />
-    <ClInclude Include="include\ns\windows_private.h" />
-    <ClInclude Include="include\rtc_base\checks.h" />
-    <ClInclude Include="include\rtc_base\compile_assert_c.h" />
-    <ClInclude Include="include\rtc_base\constructormagic.h" />
-    <ClInclude Include="include\rtc_base\inline.h" />
-    <ClInclude Include="include\rtc_base\safe_compare.h" />
-    <ClInclude Include="include\rtc_base\type_traits.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="WebRtc_NS.h" />
+    <ClInclude Include="AduioFile\AudioFile.h" />
+    <ClInclude Include="rtc_base\checks.h" />
+    <ClInclude Include="rtc_base\compile_assert_c.h" />
+    <ClInclude Include="rtc_base\constructormagic.h" />
+    <ClInclude Include="rtc_base\inline.h" />
+    <ClInclude Include="rtc_base\safe_compare.h" />
+    <ClInclude Include="rtc_base\type_traits.h" />
+    <ClInclude Include="splitting_filter\audio_util.h" />
+    <ClInclude Include="splitting_filter\dot_product_with_scale.h" />
+    <ClInclude Include="splitting_filter\signal_processing_library.h" />
+    <ClInclude Include="splitting_filter\sparse_fir_filter.h" />
+    <ClInclude Include="splitting_filter\splitting_filter.h" />
+    <ClInclude Include="splitting_filter\spl_inl.h" />
+    <ClInclude Include="splitting_filter\spl_sqrt_floor.h" />
+    <ClInclude Include="splitting_filter\three_band_filter_bank.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\AduioFile\AudioFile.cpp" />
-    <ClCompile Include="include\audio_processing\audio_util.cc" />
-    <ClCompile Include="include\audio_processing\dot_product_with_scale.cc" />
-    <ClCompile Include="include\audio_processing\fft4g.c" />
-    <ClCompile Include="include\audio_processing\spl_sqrt_floor.c" />
-    <ClCompile Include="include\ns\noise_suppression.c" />
-    <ClCompile Include="include\ns\ns_core.c" />
-    <ClCompile Include="include\rtc_base\checks.cc" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="WebRtc_official.cpp" />
+    <ClCompile Include="AduioFile\AudioFile.cpp" />
+    <ClCompile Include="my_splitting_filter.cpp" />
+    <ClCompile Include="rtc_base\checks.cc" />
+    <ClCompile Include="splitting_filter\audio_util.cc" />
+    <ClCompile Include="splitting_filter\dot_product_with_scale.cc" />
+    <ClCompile Include="splitting_filter\sparse_fir_filter.cc" />
+    <ClCompile Include="splitting_filter\splitting_filter.c" />
+    <ClCompile Include="splitting_filter\spl_sqrt_floor.c" />
+    <ClCompile Include="splitting_filter\three_band_filter_bank.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

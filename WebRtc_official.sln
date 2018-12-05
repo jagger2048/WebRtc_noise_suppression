@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebRtc_official", "WebRtc_official\WebRtc_official.vcxproj", "{797546CD-8DC5-4F76-A90F-01923052E5AE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WebRtc_noise_suppression", "WebRtc_noise_suppression\WebRtc_noise_suppression.vcxproj", "{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "my_splitting_filter", "my_splitting_filter\my_splitting_filter.vcxproj", "{49C49095-8BA5-42D3-9319-7333001A30F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +23,14 @@ Global
 		{797546CD-8DC5-4F76-A90F-01923052E5AE}.Release|x64.Build.0 = Release|x64
 		{797546CD-8DC5-4F76-A90F-01923052E5AE}.Release|x86.ActiveCfg = Release|Win32
 		{797546CD-8DC5-4F76-A90F-01923052E5AE}.Release|x86.Build.0 = Release|Win32
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Debug|x64.ActiveCfg = Debug|x64
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Debug|x64.Build.0 = Debug|x64
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Debug|x86.ActiveCfg = Debug|Win32
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Debug|x86.Build.0 = Debug|Win32
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Release|x64.ActiveCfg = Release|x64
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Release|x64.Build.0 = Release|x64
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Release|x86.ActiveCfg = Release|Win32
-		{48EBD7EC-6FA6-43D7-91EA-B2030FA399FE}.Release|x86.Build.0 = Release|Win32
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Debug|x64.ActiveCfg = Debug|x64
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Debug|x64.Build.0 = Debug|x64
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Debug|x86.ActiveCfg = Debug|Win32
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Debug|x86.Build.0 = Debug|Win32
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Release|x64.ActiveCfg = Release|x64
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Release|x64.Build.0 = Release|x64
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Release|x86.ActiveCfg = Release|Win32
+		{49C49095-8BA5-42D3-9319-7333001A30F4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

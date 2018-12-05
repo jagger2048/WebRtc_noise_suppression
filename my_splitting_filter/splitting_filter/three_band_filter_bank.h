@@ -15,7 +15,8 @@
 #include <memory>
 #include <vector>
 
-#include "common_audio/sparse_fir_filter.h"
+//#include "common_audio/sparse_fir_filter.h"
+#include "sparse_fir_filter.h"
 
 namespace webrtc {
 

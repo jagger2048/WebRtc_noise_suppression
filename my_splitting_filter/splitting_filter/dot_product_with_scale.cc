@@ -33,5 +33,5 @@ int32_t WebRtcSpl_DotProductWithScale(const int16_t* vector1,
   }
 
   //return rtc::saturated_cast<int32_t>(sum);		////#include "rtc_base/numerics/safe_conversions.h"
-  return static_cast<> <int32_t>(sum);
+  return static_cast<int32_t>(sum);
 }

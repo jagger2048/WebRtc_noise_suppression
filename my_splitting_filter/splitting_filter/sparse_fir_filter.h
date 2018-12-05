@@ -14,7 +14,7 @@
 #include <cstring>
 #include <vector>
 
-#include "rtc_base/constructormagic.h"
+//#include "rtc_base/constructormagic.h"
 
 namespace webrtc {
 
@@ -45,7 +45,7 @@ class SparseFIRFilter final {
   const std::vector<float> nonzero_coeffs_;
   std::vector<float> state_;
 
-  RTC_DISALLOW_COPY_AND_ASSIGN(SparseFIRFilter);
+  //RTC_DISALLOW_COPY_AND_ASSIGN(SparseFIRFilter);
 };
 
 }  // namespace webrtc
