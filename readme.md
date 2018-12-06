@@ -21,7 +21,7 @@ For more details, please find https://chromium.googlesource.com/external/webrtc/
 ------
 
 ## Update history:
-[中文说明-for ver0.1](https://github.com/jagger2048/WebRtc_noise_suppression/readme_cn.md)
+[中文说明-for ver0.1](https://github.com/jagger2048/WebRtc_noise_suppression/blob/master/readme_cn.md)
 
 -  ver 1.0			2018-12-6
 - [x] 1. Update the dependent files in sync with official webrtc project (branch de10eea, 2018.12).
