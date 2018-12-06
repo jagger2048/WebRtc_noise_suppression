@@ -25,6 +25,9 @@
     <Filter Include="WebRtc\Rtc base">
       <UniqueIdentifier>{ceeaa698-2f45-400d-b616-841e699d993c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WebRtc\Splitting filter">
+      <UniqueIdentifier>{ec1f8cd2-ff9d-4ff8-b392-fa03bbc1f9d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -87,6 +90,15 @@
     <ClInclude Include="include\rtc_base\type_traits.h">
       <Filter>WebRtc\Rtc base</Filter>
     </ClInclude>
+    <ClInclude Include="include\splitting_filter\sparse_fir_filter.h">
+      <Filter>WebRtc\Splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\splitting_filter\splitting_filter.h">
+      <Filter>WebRtc\Splitting filter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\splitting_filter\three_band_filter_bank.h">
+      <Filter>WebRtc\Splitting filter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -118,6 +130,15 @@
     </ClCompile>
     <ClCompile Include="include\rtc_base\checks.cc">
       <Filter>WebRtc\Rtc base</Filter>
+    </ClCompile>
+    <ClCompile Include="include\splitting_filter\sparse_fir_filter.cc">
+      <Filter>WebRtc\Splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="include\splitting_filter\splitting_filter.c">
+      <Filter>WebRtc\Splitting filter</Filter>
+    </ClCompile>
+    <ClCompile Include="include\splitting_filter\three_band_filter_bank.cc">
+      <Filter>WebRtc\Splitting filter</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

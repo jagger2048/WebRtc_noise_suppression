@@ -166,6 +166,9 @@
     <ClInclude Include="include\rtc_base\inline.h" />
     <ClInclude Include="include\rtc_base\safe_compare.h" />
     <ClInclude Include="include\rtc_base\type_traits.h" />
+    <ClInclude Include="include\splitting_filter\sparse_fir_filter.h" />
+    <ClInclude Include="include\splitting_filter\splitting_filter.h" />
+    <ClInclude Include="include\splitting_filter\three_band_filter_bank.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="WebRtc_NS.h" />
@@ -179,6 +182,9 @@
     <ClCompile Include="include\ns\noise_suppression.c" />
     <ClCompile Include="include\ns\ns_core.c" />
     <ClCompile Include="include\rtc_base\checks.cc" />
+    <ClCompile Include="include\splitting_filter\sparse_fir_filter.cc" />
+    <ClCompile Include="include\splitting_filter\splitting_filter.c" />
+    <ClCompile Include="include\splitting_filter\three_band_filter_bank.cc" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
