@@ -34,9 +34,9 @@ ns_level = kLow    	||	webrtc_ns_kLow_babble_15dB.wav
 ns_level = kModerate	||	webrtc_ns_kModerate_babble_15dB.wav
 ns_level = kHigh		||	webrtc_ns_kHigh_babble_15dB.wav
 
-The rnnoise and speexdsp's noise suppression test case wav files are captured from the https://people.xiph.rog/~jm/demo/rnnoise/
+The rnnoise and speexdsp's noise suppression test case wav files are captured from the https://people.xiph.org/~jm/demo/rnnoise/
 
-Thses files can be found in the link [TEST_CASES](https://github.com/jagger2048/WebRtc_noise_suppression/assets/test_case)
+Thses files can be found in the link [TEST_CASES](https://github.com/jagger2048/WebRtc_noise_suppression/tree/master/assets/test_case)
 
 ## Performance
 
@@ -45,8 +45,11 @@ With the same input,babble_15dB.wav, we set up a contrast among RNNoise, speexds
 For the webrtc's ns, kHigh performs better than kModerate  which can suppress the whole noise.The kLow case has a poor performance than the others. Notes that the webrtc's ns has an impacts of the Gain when processed the audio data, maybe it should be interfaced with AGC module. 
 
 Finally, speexdsp's ns can suppress the babble noise but  not completely reduce the backgourd noise. These noise suppression algorithm's performance can be summed up  as blows:
+
 $$
+
 kLow   < speechx \approx kModerate <kHigh \approx Rnnoise
+
 $$
 
 
@@ -54,7 +57,7 @@ $$
 
 ## Update history:
 
-[中文说明-for ver0.1](https://github.com/jagger2048/WebRtc_noise_suppression/readme_cn.md)
+[中文说明-for ver0.1](https://github.com/jagger2048/WebRtc_noise_suppression/blob/master/readme_cn.md)
 
 -  ver 1.0			2018-12-6
 - [x] 1. Update the dependent files in sync with official webrtc project (branch de10eea, 2018.12).
